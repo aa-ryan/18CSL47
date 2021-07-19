@@ -14,7 +14,7 @@ public class Main {
 		}
 		
 		System.out.println("STUDENT INFORMATION");
-		System.out.println("NAME\t" + "USN\t" + "BRANCH\t" + "PHONE_NUMBER\n");
+		System.out.println("NAME\t\t" + "USN\t\t" + "BRANCH\t\t" + "PHONE_NUMBER\n");
 		for(int i = 1; i <= n; i++) {
 			str[i].print();
 		}

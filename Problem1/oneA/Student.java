@@ -18,6 +18,6 @@ public class Student {
 	}
 
 	void print() {
-		System.out.println(name + "\t" + usn  + "\t" + branch + "\t" + phone + "\n");
+		System.out.println(name + "\t\t" + usn  + "\t\t" + branch + "\t\t" + phone + "\n");
 	}
 }
