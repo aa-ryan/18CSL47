@@ -9,7 +9,7 @@ public class Student {
 
 	Scanner sObj = new Scanner(System.in);
 
-	void get(int x) {
+	Student (int x) {
 		System.out.println("Enter NAME, USN, BRANCH and PHONE of a " + x + "student");
 		name = sObj.nextLine();
 		usn = sObj.nextLine();
@@ -21,3 +21,17 @@ public class Student {
 		System.out.println(name + "\t\t" + usn  + "\t\t" + branch + "\t\t" + phone + "\n");
 	}
 }
+
+
+// void get(int x) {
+// 	System.out.println("Enter NAME, USN, BRANCH and PHONE of a " + x + "student");
+// 	name = sObj.nextLine();
+// 	usn = sObj.nextLine();
+// 	branch = sObj.nextLine();
+// 	phone = sObj.nextLong();
+// }
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  I preferred using constructor of Student class instead of a function get(), saves lines of code. //
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+

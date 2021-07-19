@@ -9,8 +9,8 @@ public class Main {
 		int n = sObj.nextInt();
 
 		for (int i = 1; i <= n; i++) {
-			str[i] = new Student();
-			str[i].get(i);
+			str[i] = new Student(i);
+			// str[i].get(i);
 		}
 		
 		System.out.println("STUDENT INFORMATION");
@@ -21,3 +21,4 @@ public class Main {
 		sObj.close();
 	}
 }
+
