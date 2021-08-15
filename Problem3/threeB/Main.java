@@ -3,6 +3,7 @@ import java.util.Random;
 
 class mythread extends Thread {
 	int num;
+
 	mythread(int n) {
 		num = n;
 	}
