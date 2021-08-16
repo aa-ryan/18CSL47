@@ -15,13 +15,10 @@ class QuickSort
 	int partition(int arr[], int low, int high)
 	{
 		int pivot = arr[high];
-		int i = (low-1); // index of smaller element
-		for (int j=low; j<high; j++)
-		{
-			if (arr[j] <= pivot)
-			{
+		int i = low - 1; // index of smaller element
+		for (int j = low; j < high; j++) {
+			if (arr[j] <= pivot) {
 				i++;
-
 				int temp = arr[i];
 				arr[i] = arr[j];
 				arr[j] = temp;
