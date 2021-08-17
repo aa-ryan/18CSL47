@@ -5,7 +5,7 @@ class mergeSort
 
 	static int[] randomArray() {
 		Random rn = new Random();
-		int[] arr = new int[rn.nextInt(100000)];  // increase this 1000 to see change in execution time
+		int[] arr = new int[rn.nextInt(1000)];  // increase this 1000 to see change in execution time
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = rn.nextInt(500);
 		}
@@ -54,10 +54,10 @@ class mergeSort
 
 	void sort(int[] arr, int low, int high) {
 		if (low < high) {
-			int m = low + (high-low)/2;
-			sort(arr, low, m);
-			sort(arr, m+1, high);
-			merge(arr, low, m, high);
+			int mid = low + (high-low)/2;
+			sort(arr, low, mid);
+			sort(arr, mid+1, high);
+			merge(arr, low, mid, high);
 		}
 	}
 
