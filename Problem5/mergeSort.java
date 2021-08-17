@@ -78,14 +78,14 @@ class mergeSort
 
 		System.out.println("Unsorted Array");
 		printArray(arr);
-		long sTime = System.currentTimeMillis();
+		long sTime = System.nanoTime();
 		mergeSort ob = new mergeSort ();
 		ob.sort(arr, 0, n-1);
-		long eTime = System.currentTimeMillis();
+		long eTime = System.nanoTime();
 
 		System.out.println("Sorted array");
 		printArray(arr);
-		System.out.println("Time taken: " + (eTime - sTime) + "ms");
+		System.out.println("Time taken: " + (double)(eTime - sTime)/100000 + "ms");
 	}
 }
 
