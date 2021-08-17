@@ -28,7 +28,7 @@ public class Dijkstra {
 		}
 		System.out.println("Shortest Distance Source: ");
 		for (i = 1; i <= n; i++) 
-			System.out.println(source + "->" + i + "\t" + d[i]);
+			System.out.println(source + "->" + i + "  =\t" + d[i]);
 	}
 
 	public static void main(String[] args) {
