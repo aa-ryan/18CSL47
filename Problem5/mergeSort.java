@@ -1,38 +1,39 @@
 import java.util.Random;
+import java.util.Scanner;
 
 class mergeSort
 {
 
 	static int[] randomArray() {
 		Random rn = new Random();
-		int[] arr = new int[rn.nextInt(1000)];  // increase this 1000 to see change in execution time
+		Scanner sObj = new Scanner(System.in);
+		System.out.print("Enter Size of the array: ");
+		int n = sObj.nextInt();
+		int[] arr = new int[n];  // increase this 1000 to see change in execution time
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = rn.nextInt(500);
+			arr[i] = rn.nextInt(50000);
 		}
+		sObj.close();
 		return arr;
 	}
 
-	void merge(int arr[], int low, int m, int high) {
-		int n1 = m - low + 1;
-		int n2 = high - m;
+	void merge(int arr[], int low, int mid, int high) {
+		int n1 = mid - low + 1;
+		int n2 = high - mid;
 
-		// temp array
-		int L[] = new int[n1];
-		int R[] = new int[n2];
+		int[] L = new int[n1];
+		int[] R = new int[n2];
 
-		for (int i = 0; i < n1; ++i) L[i] = arr[low + i];
-		for (int i = 0; i < n2; ++i) R[i] = arr[m + 1 + i];
-
-		int i = 0, j = 0;
-
-		int k = low;
+		for (int i = 0; i < n1; i++) L[i] = arr[low + i];
+		for (int i = 0; i < n2; i++) R[i] = arr[mid + 1 + i];
+		
+		int i = 0, j = 0, k = low;
 
 		while (i < n1 && j < n2) {
 			if (L[i] <= R[j]) {
 				arr[k] = L[i];
 				i++;
-			}
-			else {
+			} else {
 				arr[k] = R[j];
 				j++;
 			}
@@ -41,20 +42,20 @@ class mergeSort
 
 		while (i < n1) {
 			arr[k] = L[i];
+			k++; 
 			i++;
-			k++;
 		}
 
 		while (j < n2) {
 			arr[k] = R[j];
+			k++; 
 			j++;
-			k++;
 		}
 	}
 
 	void sort(int[] arr, int low, int high) {
 		if (low < high) {
-			int mid = low + (high-low)/2;
+			int mid = low + (high - low) / 2;
 			sort(arr, low, mid);
 			sort(arr, mid+1, high);
 			merge(arr, low, mid, high);
