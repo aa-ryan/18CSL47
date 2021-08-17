@@ -2,13 +2,16 @@ import java.util.Random;
 
 class QuickSort
 {
-
 	static int[] randomArray() {
 		Random rn = new Random();
-		int[] arr = new int[rn.nextInt(1000)];  // increase this 1000 to see change in execution time
+		Scanner sObj = new Scanner(System.in);
+		System.out.print("Enter Size of the array: ");
+		int n = sObj.nextInt();
+		int[] arr = new int[n];  // increase this 1000 to see change in execution time
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = rn.nextInt(500);
+			arr[i] = rn.nextInt(50000);
 		}
+		sObj.close();
 		return arr;
 	}
 
